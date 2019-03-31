@@ -4,6 +4,9 @@ const express = require('express')
 const next = require('next')
 
 const isDev = process.env.NODE_ENV !== 'production'
+
+console.log(`Development app: ${isDev}`)
+
 const app = next({ dev: isDev })
 const nextHandler = app.getRequestHandler()
 
